@@ -12,7 +12,6 @@ def main():
     # Paths to input and output directories/folders
     pdf_directory = 'pdf_files_test'
     xml_directory = 'xml_files'
-    txt_directory = 'txt_files'
 
     # Gets list of all files in directory
     pdf_files = [f for f in os.listdir(pdf_directory) if f.endswith('.pdf')]
@@ -27,22 +26,6 @@ def main():
 
         # Convert PDF to XML
         convert_pdf_xml(pdf_path, xml_path)
-
-        #Create input and output paths for xml to txt
-        #text_file = os.path.splitext(pdf)[0] + '.txt' #Use pdf here because we are just taing the name of the file not actually using the pdf. (If I used xml file it would end up with name.xml.txt which is not ideal )
-        #text_path = os.path.join(txt_directory, text_file)
-
-        #Convert the xml to txt
-        #convert_xml_txt(xml_path, text_path)
-    
-    #xml_files = [x for x in os.listdir(xml_directory) if x.endswith('.pdf')]
-    
-    """ for xml in xml_files:
-        xml_path = os.path.join(xml_directory, xml)
-        txt_file = os.path.splitext(xml)[0] + '.txt'
-        txt_path = os.path.join(txt_directory, txt_file)
-
-        convert_xml_txt(xml_path, txt_path) """
 
 
 if __name__ == "__main__":

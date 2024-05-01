@@ -36,3 +36,8 @@ def main():
     # (Currently have name and removed pages starting with A and E.)
     # Also need to change it to have an input file directory just like auto_convert_py.
     return valid_entries
+
+
+
+if __name__ == "__main__":
+    main()
